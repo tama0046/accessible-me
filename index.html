@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" itemscope itemtype="https://schema.org/WebPage">
 
 <head>
   <meta charset="UTF-8">
@@ -13,56 +13,76 @@
 </head>
 
 <body>
-  <div class="container">
-    <div class="site-header">
-      <h1>Jam Box Studios</h1>
-      <div class="main-nav">
+  <!-- Skip link -->
+  <a href="#maincontent" class="skip-link">Skip to main content</a>
+
+  <header role="banner" itemscope itemtype="https://schema.org/WPHeader">
+    <div class="container">
+      <h1 itemprop="headline">Jam Box Studios</h1>
+      <nav role="navigation" aria-label="Main navigation">
         <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#">Products</a></li>
           <li><a href="#">Reservation</a></li>
           <li><a href="#">Studio</a></li>
         </ul>
-      </div>
-      <img src="https://placekitten.com/1200/900" class="banner">
+      </nav>
+      <img src="https://placecats.com/1200/900" class="banner" alt="A cat placeholder image">
     </div>
-    <div class="main-content">
+  </header>
+
+  <main id="maincontent" role="main" class="main-content" itemscope itemtype="https://schema.org/CreativeWork">
+    <div class="container">
       <h1>Welcome to Jam Box</h1>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus laboriosam praesentium nostrum ipsa eveniet, officia deserunt cumque eius esse enim, ipsam accusantium autem nihil quaerat sequi perferendis optio quia veritatis.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus laboriosam praesentium nostrum ipsa eveniet, officia deserunt cumque eius esse enim, ipsam accusantium autem nihil quaerat sequi perferendis optio quia veritatis.</p>
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam perferendis expedita sed itaque odit ipsam omnis, eos voluptates magni fugit culpa voluptatibus, inventore eaque, eligendi voluptatum! Voluptate iusto error voluptatibus.</p>
-      <div class="owner">
-        <h1>Meet the owner</h1>
+
+      <section class="owner" itemscope itemtype="https://schema.org/Person">
+        <h2>Meet the owner</h2>
         <ul>
-          <li>Name: John Doe</li>
-          <li>Title: CEO</li>
-          <li>Email: johnjoe@jambox.ca</li>
-          <li>Phone: 613-000-0000</li>
+          <li><strong>Name:</strong> <span itemprop="name">John Doe</span></li>
+          <li><strong>Title:</strong> <span itemprop="jobTitle">CEO</span></li>
+          <li><strong>Email:</strong> <a href="mailto:johnjoe@jambox.ca" itemprop="email">johnjoe@jambox.ca</a></li>
+          <li><strong>Phone:</strong> <span itemprop="telephone">613-000-0000</span></li>
         </ul>
-        <h1>Address</h1>
-        <p>
-          Jambox Studios
-          123 Guitar Road,
-          Musicville, Danceistan
-          B3T 0L0
-        </p>
-      </div>
-      <div class="contact-section">
-        <h1>Contact Us</h1>
-        <form action="thanks.html">
-          <label>Full Name</label>
-          <input type="text" placeholder="Full Name">
-          <input type="text" placeholder="Email">
-          <input type="text" placeholder="Subject">
-          <b>Your Message</b>
-          <textarea></textarea>
+
+        <section class="address" itemscope itemtype="https://schema.org/PostalAddress">
+          <h2>Address</h2>
+          <p>
+            <span itemprop="streetAddress">123 Guitar Road</span>,<br>
+            <span itemprop="addressLocality">Musicville</span>, <span itemprop="addressRegion">Danceistan</span><br>
+            <span itemprop="postalCode">B3T 0L0</span>
+          </p>
+        </section>
+      </section>
+
+      <section class="contact-section" itemscope itemtype="https://schema.org/ContactPage">
+        <h2>Contact Us</h2>
+        <form action="thanks.html" aria-label="Contact form">
+          <label for="fullname">Full Name</label>
+          <input type="text" id="fullname" placeholder="Full Name" required aria-required="true">
+          
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Email" required aria-required="true">
+          
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" placeholder="Subject">
+          
+          <label for="message">Your Message</label>
+          <textarea id="message" placeholder="Your Message"></textarea>
+          
           <button type="submit">Send</button>
         </form>
-      </div>
+      </section>
     </div>
-    <div class="site-footer">
-      &copy; 2021 Jam Box Studios
+  </main>
+
+  <footer role="contentinfo" itemscope itemtype="https://schema.org/WPFooter">
+    <div class="container">
+      &copy; <span itemprop="copyrightYear">2021</span> <span itemprop="copyrightHolder">Jam Box Studios</span>
     </div>
-  </div>
+  </footer>
+
 </body>
 
 </html>

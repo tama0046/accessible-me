@@ -1,16 +1,12 @@
 body {
   font-family: 'Roboto', Helvetica, sans-serif;
-  background-color: grey;
+  background-color: #f0f0f0; /* Updated background color for contrast */
+  color: #333; /* Updated text color for better readability */
   margin: 0;
   padding: 0;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   font-family: 'Stick No Bills', 'Roboto', Helvetica, sans-serif;
 }
 
@@ -39,33 +35,46 @@ img {
 
 .main-nav ul li a {
   display: block;
-  color: inherit;
+  color: #000; /* Changed to black for better contrast */
   text-decoration: none;
   font-size: 1.25rem;
 }
 
-form input,
-form textarea {
+form input, form textarea {
   display: block;
   width: 100%;
   margin-bottom: 1rem;
   padding: .5rem 1rem;
+  border: 1px solid #ccc; /* Add a border for better contrast */
 }
 
 form textarea {
   min-height: 150px;
-  max-height: 150px;
-  height: 150px;
   resize: none;
 }
 
 form button {
-  background: none;
-  border: 2px solid black;
+  background-color: #007BFF; /* Blue background for button */
+  color: #fff;
+  border: none;
   padding: 1rem;
   text-transform: uppercase;
 }
 
 .site-footer {
   padding: 2rem 0;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: #000;
+  color: #fff;
+  padding: 8px;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
 }
