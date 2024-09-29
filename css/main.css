@@ -343,7 +343,7 @@ form button:hover {
   form input,
   form textarea,
   form select {
-    width: 90%;
+    width: 80%;
   }
 
   .cta-button {
